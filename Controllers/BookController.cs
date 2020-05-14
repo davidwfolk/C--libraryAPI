@@ -68,8 +68,8 @@ namespace libraryapi
           throw new Exception("Invalid Book ID");
         }
         bookToUpdate.Title = updatedBook.Title == null ? bookToUpdate.Title : updatedBook.Title;
-        bookToUpdate.Description = updatedBook.Description == null ? bookToUpdate.Description : updatedBook.Description;
-        bookToUpdate.DaysBorrowed = updatedBook.DaysBorrowed;
+        bookToUpdate.Author = updatedBook.Author == null ? bookToUpdate.Author : updatedBook.Author;
+        bookToUpdate.DaysChecked = updatedBook.DaysChecked;
         return Ok(bookToUpdate);
       }
       catch (System.Exception err)

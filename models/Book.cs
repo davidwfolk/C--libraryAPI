@@ -10,10 +10,10 @@ namespace libraryapi
     public string Title { get; set; }
     [Required]
     [MaxLength(100)]
-    public string Description { get; set; }
+    public string Author { get; set; }
     [Required]
     [Range(1, 30)]
-    public int DaysBorrowed { get; set; }
+    public int DaysChecked { get; set; }
     public string Id { get; private set; }
 
     public Book()
@@ -21,11 +21,11 @@ namespace libraryapi
       Id = Guid.NewGuid().ToString();
 
     }
-    public Book(string title, string description, int daysBorrowed)
+    public Book(string title, string author, int daysChecked)
     {
       Title = title;
-      Description = description;
-      DaysBorrowed = daysBorrowed;
+      Author = author;
+      DaysChecked = daysChecked;
       Id = Guid.NewGuid().ToString();
     }
   }
